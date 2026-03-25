@@ -1,6 +1,6 @@
 # TODO-STEP 1: Define the Workflow Name
 # Uncomment the following line and replace <WORKFLOW_NAME> with a descriptive name. For example: Python CI/CD Pipeline
-name: <Python CI/CD Pipeline>
+name: Python CI/CD Pipeline
 
 # TODO-STEP 2: Define the Trigger Events
 # Uncomment the following lines to trigger the workflow on push and pull request events
@@ -11,7 +11,7 @@ on:
 jobs:
   # Build job
   # TODO-STEP 3: Create your "Build" job
-  <build>:
+  build:
     # TODO-STEP 3a: Specify the runner for this job
     runs-on: ubuntu-latest
     
@@ -25,7 +25,7 @@ jobs:
         python-version: '3.9'
 
     # TODO-STEP 3b: Enter a name for your step to display on GitHub. For example: Install dependencies
-    - name: <Install dependencies>
+    - name: Install dependencies
     # TODO-STEP 3c: Add commands to install dependencies
     # Hint: Use pip to install packages from requirements.txt
       run: |
@@ -34,10 +34,10 @@ jobs:
 
   # Test job
   # TODO-STEP 4: Create your "Test" job
-  <test>:
+  test:
     # TODO-STEP 4a: Ensure this job runs after the build job.
     # NOTE: Make sure to use the Job Name used above in Line 14. 
-    needs: <build>
+    needs: build
     runs-on: ubuntu-latest
     
     steps:
